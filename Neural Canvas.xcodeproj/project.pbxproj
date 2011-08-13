@@ -1,0 +1,305 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CA50B9DC13F6CAD8006D6F5B /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA50B9DB13F6CAD8006D6F5B /* Cocoa.framework */; };
+		CA50B9E613F6CAD8006D6F5B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CA50B9E413F6CAD8006D6F5B /* InfoPlist.strings */; };
+		CA50B9E813F6CAD9006D6F5B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CA50B9E713F6CAD9006D6F5B /* main.m */; };
+		CA50B9EC13F6CAD9006D6F5B /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = CA50B9EA13F6CAD9006D6F5B /* Credits.rtf */; };
+		CA50B9EF13F6CAD9006D6F5B /* NeuralCanvasDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = CA50B9EE13F6CAD9006D6F5B /* NeuralCanvasDocument.m */; };
+		CA50B9F213F6CAD9006D6F5B /* NeuralCanvasDocument.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA50B9F013F6CAD9006D6F5B /* NeuralCanvasDocument.xib */; };
+		CA50B9F513F6CAD9006D6F5B /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA50B9F313F6CAD9006D6F5B /* MainMenu.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		CA50B9D713F6CAD8006D6F5B /* Neural Canvas.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Neural Canvas.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CA50B9DB13F6CAD8006D6F5B /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		CA50B9DE13F6CAD8006D6F5B /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		CA50B9DF13F6CAD8006D6F5B /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		CA50B9E013F6CAD8006D6F5B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		CA50B9E313F6CAD8006D6F5B /* Neural Canvas-Info.plist */ = {isa = PBXFileReference; path = "Neural Canvas-Info.plist"; sourceTree = "<group>"; };
+		CA50B9E513F6CAD8006D6F5B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		CA50B9E713F6CAD9006D6F5B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		CA50B9E913F6CAD9006D6F5B /* Neural Canvas-Prefix.pch */ = {isa = PBXFileReference; path = "Neural Canvas-Prefix.pch"; sourceTree = "<group>"; };
+		CA50B9EB13F6CAD9006D6F5B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		CA50B9ED13F6CAD9006D6F5B /* NeuralCanvasDocument.h */ = {isa = PBXFileReference; path = NeuralCanvasDocument.h; sourceTree = "<group>"; };
+		CA50B9EE13F6CAD9006D6F5B /* NeuralCanvasDocument.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NeuralCanvasDocument.m; sourceTree = "<group>"; };
+		CA50B9F113F6CAD9006D6F5B /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/NeuralCanvasDocument.xib; sourceTree = "<group>"; };
+		CA50B9F413F6CAD9006D6F5B /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CA50B9D413F6CAD8006D6F5B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CA50B9DC13F6CAD8006D6F5B /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CA50B9CC13F6CAD8006D6F5B = {
+			isa = PBXGroup;
+			children = (
+				CA50B9E113F6CAD8006D6F5B /* Neural Canvas */,
+				CA50B9DA13F6CAD8006D6F5B /* Frameworks */,
+				CA50B9D813F6CAD8006D6F5B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CA50B9D813F6CAD8006D6F5B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CA50B9D713F6CAD8006D6F5B /* Neural Canvas.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CA50B9DA13F6CAD8006D6F5B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CA50B9DB13F6CAD8006D6F5B /* Cocoa.framework */,
+				CA50B9DD13F6CAD8006D6F5B /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CA50B9DD13F6CAD8006D6F5B /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CA50B9DE13F6CAD8006D6F5B /* AppKit.framework */,
+				CA50B9DF13F6CAD8006D6F5B /* CoreData.framework */,
+				CA50B9E013F6CAD8006D6F5B /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		CA50B9E113F6CAD8006D6F5B /* Neural Canvas */ = {
+			isa = PBXGroup;
+			children = (
+				CA50B9ED13F6CAD9006D6F5B /* NeuralCanvasDocument.h */,
+				CA50B9EE13F6CAD9006D6F5B /* NeuralCanvasDocument.m */,
+				CA50B9F013F6CAD9006D6F5B /* NeuralCanvasDocument.xib */,
+				CA50B9F313F6CAD9006D6F5B /* MainMenu.xib */,
+				CA50B9E213F6CAD8006D6F5B /* Supporting Files */,
+			);
+			path = "Neural Canvas";
+			sourceTree = "<group>";
+		};
+		CA50B9E213F6CAD8006D6F5B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CA50B9E313F6CAD8006D6F5B /* Neural Canvas-Info.plist */,
+				CA50B9E413F6CAD8006D6F5B /* InfoPlist.strings */,
+				CA50B9E713F6CAD9006D6F5B /* main.m */,
+				CA50B9E913F6CAD9006D6F5B /* Neural Canvas-Prefix.pch */,
+				CA50B9EA13F6CAD9006D6F5B /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CA50B9D613F6CAD8006D6F5B /* Neural Canvas */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CA50B9F813F6CAD9006D6F5B /* Build configuration list for PBXNativeTarget "Neural Canvas" */;
+			buildPhases = (
+				CA50B9D313F6CAD8006D6F5B /* Sources */,
+				CA50B9D413F6CAD8006D6F5B /* Frameworks */,
+				CA50B9D513F6CAD8006D6F5B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Neural Canvas";
+			productName = "Neural Canvas";
+			productReference = CA50B9D713F6CAD8006D6F5B /* Neural Canvas.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CA50B9CE13F6CAD8006D6F5B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				ORGANIZATIONNAME = "McMaster University";
+			};
+			buildConfigurationList = CA50B9D113F6CAD8006D6F5B /* Build configuration list for PBXProject "Neural Canvas" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = CA50B9CC13F6CAD8006D6F5B;
+			productRefGroup = CA50B9D813F6CAD8006D6F5B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CA50B9D613F6CAD8006D6F5B /* Neural Canvas */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CA50B9D513F6CAD8006D6F5B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CA50B9E613F6CAD8006D6F5B /* InfoPlist.strings in Resources */,
+				CA50B9EC13F6CAD9006D6F5B /* Credits.rtf in Resources */,
+				CA50B9F213F6CAD9006D6F5B /* NeuralCanvasDocument.xib in Resources */,
+				CA50B9F513F6CAD9006D6F5B /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CA50B9D313F6CAD8006D6F5B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CA50B9E813F6CAD9006D6F5B /* main.m in Sources */,
+				CA50B9EF13F6CAD9006D6F5B /* NeuralCanvasDocument.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		CA50B9E413F6CAD8006D6F5B /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CA50B9E513F6CAD8006D6F5B /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		CA50B9EA13F6CAD9006D6F5B /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CA50B9EB13F6CAD9006D6F5B /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		CA50B9F013F6CAD9006D6F5B /* NeuralCanvasDocument.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CA50B9F113F6CAD9006D6F5B /* en */,
+			);
+			name = NeuralCanvasDocument.xib;
+			sourceTree = "<group>";
+		};
+		CA50B9F313F6CAD9006D6F5B /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CA50B9F413F6CAD9006D6F5B /* en */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CA50B9F613F6CAD9006D6F5B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		CA50B9F713F6CAD9006D6F5B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		CA50B9F913F6CAD9006D6F5B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Neural Canvas/Neural Canvas-Prefix.pch";
+				INFOPLIST_FILE = "Neural Canvas/Neural Canvas-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		CA50B9FA13F6CAD9006D6F5B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Neural Canvas/Neural Canvas-Prefix.pch";
+				INFOPLIST_FILE = "Neural Canvas/Neural Canvas-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CA50B9D113F6CAD8006D6F5B /* Build configuration list for PBXProject "Neural Canvas" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CA50B9F613F6CAD9006D6F5B /* Debug */,
+				CA50B9F713F6CAD9006D6F5B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CA50B9F813F6CAD9006D6F5B /* Build configuration list for PBXNativeTarget "Neural Canvas" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CA50B9F913F6CAD9006D6F5B /* Debug */,
+				CA50B9FA13F6CAD9006D6F5B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CA50B9CE13F6CAD8006D6F5B /* Project object */;
+}
