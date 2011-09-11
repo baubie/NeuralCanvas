@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CA404DC11413E16000D8A58C /* iconNeuron.png in Resources */ = {isa = PBXBuildFile; fileRef = CA404DC01413E16000D8A58C /* iconNeuron.png */; };
+		CA404DC51413E3DE00D8A58C /* iconConnection.png in Resources */ = {isa = PBXBuildFile; fileRef = CA404DC21413E3DE00D8A58C /* iconConnection.png */; };
+		CA404DC61413E3DE00D8A58C /* iconCurrent.png in Resources */ = {isa = PBXBuildFile; fileRef = CA404DC31413E3DE00D8A58C /* iconCurrent.png */; };
+		CA404DC71413E3DE00D8A58C /* iconSelect.png in Resources */ = {isa = PBXBuildFile; fileRef = CA404DC41413E3DE00D8A58C /* iconSelect.png */; };
+		CA404DCA1413EBFE00D8A58C /* NCObject.m in Sources */ = {isa = PBXBuildFile; fileRef = CA404DC91413EBFE00D8A58C /* NCObject.m */; };
+		CA404DCD1413EC1400D8A58C /* NCNeuron.m in Sources */ = {isa = PBXBuildFile; fileRef = CA404DCC1413EC1400D8A58C /* NCNeuron.m */; };
 		CA50B9DC13F6CAD8006D6F5B /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA50B9DB13F6CAD8006D6F5B /* Cocoa.framework */; };
 		CA50B9E613F6CAD8006D6F5B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CA50B9E413F6CAD8006D6F5B /* InfoPlist.strings */; };
 		CA50B9E813F6CAD9006D6F5B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CA50B9E713F6CAD9006D6F5B /* main.m */; };
@@ -14,23 +20,51 @@
 		CA50B9EF13F6CAD9006D6F5B /* NeuralCanvasDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = CA50B9EE13F6CAD9006D6F5B /* NeuralCanvasDocument.m */; };
 		CA50B9F213F6CAD9006D6F5B /* NeuralCanvasDocument.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA50B9F013F6CAD9006D6F5B /* NeuralCanvasDocument.xib */; };
 		CA50B9F513F6CAD9006D6F5B /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA50B9F313F6CAD9006D6F5B /* MainMenu.xib */; };
+		CA77A75214112F14006E3AF7 /* roadmap.txt in Resources */ = {isa = PBXBuildFile; fileRef = CA77A75114112F14006E3AF7 /* roadmap.txt */; };
+		CA8802AE141D190400A54299 /* NCCanvasView.m in Sources */ = {isa = PBXBuildFile; fileRef = CA8802AD141D190400A54299 /* NCCanvasView.m */; };
+		CA8802B2141D464C00A54299 /* NCCanvas.m in Sources */ = {isa = PBXBuildFile; fileRef = CA8802B1141D464C00A54299 /* NCCanvas.m */; };
+		CA8802B6141D47E400A54299 /* NCCanvasViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA8802B4141D47E400A54299 /* NCCanvasViewController.m */; };
+		CA9198D913F8655E00677F57 /* NCZoomingScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = CA9198D813F8655E00677F57 /* NCZoomingScrollView.m */; };
+		CA9E8C1D1407368D008CFBDA /* NCWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA9E8C1C1407368D008CFBDA /* NCWindowController.m */; };
+		CAB4D4DB141064AE00F65F9F /* NCAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CAB4D4DA141064AE00F65F9F /* NCAppDelegate.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CA404DC01413E16000D8A58C /* iconNeuron.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = iconNeuron.png; path = ../Media/iconNeuron.png; sourceTree = "<group>"; };
+		CA404DC21413E3DE00D8A58C /* iconConnection.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = iconConnection.png; path = Media/iconConnection.png; sourceTree = SOURCE_ROOT; };
+		CA404DC31413E3DE00D8A58C /* iconCurrent.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = iconCurrent.png; path = Media/iconCurrent.png; sourceTree = SOURCE_ROOT; };
+		CA404DC41413E3DE00D8A58C /* iconSelect.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = iconSelect.png; path = Media/iconSelect.png; sourceTree = SOURCE_ROOT; };
+		CA404DC81413EBFE00D8A58C /* NCObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCObject.h; sourceTree = "<group>"; };
+		CA404DC91413EBFE00D8A58C /* NCObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCObject.m; sourceTree = "<group>"; };
+		CA404DCB1413EC1400D8A58C /* NCNeuron.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCNeuron.h; sourceTree = "<group>"; };
+		CA404DCC1413EC1400D8A58C /* NCNeuron.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCNeuron.m; sourceTree = "<group>"; };
 		CA50B9D713F6CAD8006D6F5B /* Neural Canvas.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Neural Canvas.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA50B9DB13F6CAD8006D6F5B /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		CA50B9DE13F6CAD8006D6F5B /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		CA50B9DF13F6CAD8006D6F5B /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		CA50B9E013F6CAD8006D6F5B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		CA50B9E313F6CAD8006D6F5B /* Neural Canvas-Info.plist */ = {isa = PBXFileReference; path = "Neural Canvas-Info.plist"; sourceTree = "<group>"; };
+		CA50B9E313F6CAD8006D6F5B /* Neural Canvas-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Neural Canvas-Info.plist"; sourceTree = "<group>"; };
 		CA50B9E513F6CAD8006D6F5B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		CA50B9E713F6CAD9006D6F5B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		CA50B9E913F6CAD9006D6F5B /* Neural Canvas-Prefix.pch */ = {isa = PBXFileReference; path = "Neural Canvas-Prefix.pch"; sourceTree = "<group>"; };
+		CA50B9E913F6CAD9006D6F5B /* Neural Canvas-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Neural Canvas-Prefix.pch"; sourceTree = "<group>"; };
 		CA50B9EB13F6CAD9006D6F5B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
-		CA50B9ED13F6CAD9006D6F5B /* NeuralCanvasDocument.h */ = {isa = PBXFileReference; path = NeuralCanvasDocument.h; sourceTree = "<group>"; };
+		CA50B9ED13F6CAD9006D6F5B /* NeuralCanvasDocument.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NeuralCanvasDocument.h; sourceTree = "<group>"; };
 		CA50B9EE13F6CAD9006D6F5B /* NeuralCanvasDocument.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NeuralCanvasDocument.m; sourceTree = "<group>"; };
 		CA50B9F113F6CAD9006D6F5B /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/NeuralCanvasDocument.xib; sourceTree = "<group>"; };
 		CA50B9F413F6CAD9006D6F5B /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		CA77A75114112F14006E3AF7 /* roadmap.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = roadmap.txt; sourceTree = "<group>"; };
+		CA8802AC141D190400A54299 /* NCCanvasView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCCanvasView.h; sourceTree = "<group>"; };
+		CA8802AD141D190400A54299 /* NCCanvasView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCCanvasView.m; sourceTree = "<group>"; };
+		CA8802B0141D464C00A54299 /* NCCanvas.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCCanvas.h; sourceTree = "<group>"; };
+		CA8802B1141D464C00A54299 /* NCCanvas.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCCanvas.m; sourceTree = "<group>"; };
+		CA8802B3141D47E400A54299 /* NCCanvasViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCCanvasViewController.h; sourceTree = "<group>"; };
+		CA8802B4141D47E400A54299 /* NCCanvasViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCCanvasViewController.m; sourceTree = "<group>"; };
+		CA9198D713F8655E00677F57 /* NCZoomingScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCZoomingScrollView.h; sourceTree = "<group>"; };
+		CA9198D813F8655E00677F57 /* NCZoomingScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCZoomingScrollView.m; sourceTree = "<group>"; };
+		CA9E8C1B1407368D008CFBDA /* NCWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCWindowController.h; sourceTree = "<group>"; };
+		CA9E8C1C1407368D008CFBDA /* NCWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCWindowController.m; sourceTree = "<group>"; };
+		CAB4D4D9141064AE00F65F9F /* NCAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCAppDelegate.h; sourceTree = "<group>"; };
+		CAB4D4DA141064AE00F65F9F /* NCAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCAppDelegate.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,8 +120,23 @@
 			children = (
 				CA50B9ED13F6CAD9006D6F5B /* NeuralCanvasDocument.h */,
 				CA50B9EE13F6CAD9006D6F5B /* NeuralCanvasDocument.m */,
-				CA50B9F013F6CAD9006D6F5B /* NeuralCanvasDocument.xib */,
-				CA50B9F313F6CAD9006D6F5B /* MainMenu.xib */,
+				CA8802B0141D464C00A54299 /* NCCanvas.h */,
+				CA8802B1141D464C00A54299 /* NCCanvas.m */,
+				CA9198D713F8655E00677F57 /* NCZoomingScrollView.h */,
+				CA9198D813F8655E00677F57 /* NCZoomingScrollView.m */,
+				CA8802AC141D190400A54299 /* NCCanvasView.h */,
+				CA8802B3141D47E400A54299 /* NCCanvasViewController.h */,
+				CA8802B4141D47E400A54299 /* NCCanvasViewController.m */,
+				CA8802AD141D190400A54299 /* NCCanvasView.m */,
+				CA9E8C1B1407368D008CFBDA /* NCWindowController.h */,
+				CA9E8C1C1407368D008CFBDA /* NCWindowController.m */,
+				CA404DCB1413EC1400D8A58C /* NCNeuron.h */,
+				CA404DCC1413EC1400D8A58C /* NCNeuron.m */,
+				CA404DC81413EBFE00D8A58C /* NCObject.h */,
+				CA404DC91413EBFE00D8A58C /* NCObject.m */,
+				CAB4D4D9141064AE00F65F9F /* NCAppDelegate.h */,
+				CAB4D4DA141064AE00F65F9F /* NCAppDelegate.m */,
+				CA9E8C1E1407390E008CFBDA /* Resources */,
 				CA50B9E213F6CAD8006D6F5B /* Supporting Files */,
 			);
 			path = "Neural Canvas";
@@ -101,8 +150,22 @@
 				CA50B9E713F6CAD9006D6F5B /* main.m */,
 				CA50B9E913F6CAD9006D6F5B /* Neural Canvas-Prefix.pch */,
 				CA50B9EA13F6CAD9006D6F5B /* Credits.rtf */,
+				CA77A75114112F14006E3AF7 /* roadmap.txt */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CA9E8C1E1407390E008CFBDA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				CA404DC01413E16000D8A58C /* iconNeuron.png */,
+				CA50B9F013F6CAD9006D6F5B /* NeuralCanvasDocument.xib */,
+				CA404DC21413E3DE00D8A58C /* iconConnection.png */,
+				CA404DC31413E3DE00D8A58C /* iconCurrent.png */,
+				CA404DC41413E3DE00D8A58C /* iconSelect.png */,
+				CA50B9F313F6CAD9006D6F5B /* MainMenu.xib */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -159,6 +222,11 @@
 				CA50B9EC13F6CAD9006D6F5B /* Credits.rtf in Resources */,
 				CA50B9F213F6CAD9006D6F5B /* NeuralCanvasDocument.xib in Resources */,
 				CA50B9F513F6CAD9006D6F5B /* MainMenu.xib in Resources */,
+				CA77A75214112F14006E3AF7 /* roadmap.txt in Resources */,
+				CA404DC11413E16000D8A58C /* iconNeuron.png in Resources */,
+				CA404DC51413E3DE00D8A58C /* iconConnection.png in Resources */,
+				CA404DC61413E3DE00D8A58C /* iconCurrent.png in Resources */,
+				CA404DC71413E3DE00D8A58C /* iconSelect.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -171,6 +239,14 @@
 			files = (
 				CA50B9E813F6CAD9006D6F5B /* main.m in Sources */,
 				CA50B9EF13F6CAD9006D6F5B /* NeuralCanvasDocument.m in Sources */,
+				CA9198D913F8655E00677F57 /* NCZoomingScrollView.m in Sources */,
+				CA9E8C1D1407368D008CFBDA /* NCWindowController.m in Sources */,
+				CAB4D4DB141064AE00F65F9F /* NCAppDelegate.m in Sources */,
+				CA404DCA1413EBFE00D8A58C /* NCObject.m in Sources */,
+				CA404DCD1413EC1400D8A58C /* NCNeuron.m in Sources */,
+				CA8802AE141D190400A54299 /* NCCanvasView.m in Sources */,
+				CA8802B2141D464C00A54299 /* NCCanvas.m in Sources */,
+				CA8802B6141D47E400A54299 /* NCCanvasViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -298,6 +374,7 @@
 				CA50B9FA13F6CAD9006D6F5B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -1,0 +1,17 @@
+Neural Canvas
+By Brandon Aubie
+
+Design Overview
+=============
+Neural Canvas makes designing and simulating artifical neural networks as easy as drawing them on a piece of paper. Neurons are modelled as point processes with pre-made or custom made dynamic equations. Synapses are simulated with simple conductance based synapses or more complex conductance based synapses. Input to models is done via current injection objects that can be configured to inject current shaped by a variety of parameters such as duration, intensity, probability over time (i.e. Poisson) or arbitrary functions of amplitude.
+Simulations can be run continuously in "simulation time" that permits dynamic modifications to the simulation even as it continues to run.
+
+
+Project Roadmap
+=============
+
+Version 1.0
+- Tool pallet with ability to add prefabbed neural models.
+- Current injection object.
+- Synaptic connections.
+- Ability to save networks to file.

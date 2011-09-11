@@ -7,8 +7,10 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import "NCCanvas.h"
 
 @interface NeuralCanvasDocument : NSDocument {
+    
 }
 
 @end
