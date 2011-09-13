@@ -27,7 +27,7 @@
 		<dictionary class="NSMutableDictionary" key="IBDocument.Metadata"/>
 		<array class="NSMutableArray" key="IBDocument.RootObjects" id="580458321">
 			<object class="NSCustomObject" id="512844837">
-				<string key="NSClassName">NeuralCanvasDocument</string>
+				<string key="NSClassName">NCWindowController</string>
 			</object>
 			<object class="NSCustomObject" id="613418571">
 				<string key="NSClassName">FirstResponder</string>
@@ -49,7 +49,7 @@
 					<bool key="NSToolbarAllowsUserCustomization">NO</bool>
 					<bool key="NSToolbarAutosavesConfiguration">NO</bool>
 					<int key="NSToolbarDisplayMode">1</int>
-					<int key="NSToolbarSizeMode">1</int>
+					<int key="NSToolbarSizeMode">2</int>
 					<dictionary class="NSMutableDictionary" key="NSToolbarIBIdentifiedItems">
 						<object class="NSToolbarItem" key="49CF8DF3-9ABD-473C-A92B-418DFF5853B4" id="911899782">
 							<object class="NSMutableString" key="NSToolbarItemIdentifier">
@@ -200,7 +200,7 @@
 							</object>
 						</object>
 					</dictionary>
-					<array class="NSMutableArray" key="NSToolbarIBAllowedItems">
+					<array key="NSToolbarIBAllowedItems">
 						<reference ref="472353231"/>
 						<reference ref="506105258"/>
 						<reference ref="911899782"/>
@@ -208,7 +208,7 @@
 						<reference ref="107543950"/>
 						<reference ref="95185587"/>
 					</array>
-					<array class="NSMutableArray" key="NSToolbarIBDefaultItems">
+					<array key="NSToolbarIBDefaultItems">
 						<reference ref="911899782"/>
 						<reference ref="296767414"/>
 						<reference ref="107543950"/>
@@ -233,14 +233,14 @@
 										<object class="NSView" id="506582686">
 											<reference key="NSNextResponder" ref="697576577"/>
 											<int key="NSvFlags">274</int>
-											<string key="NSFrameSize">{500, 394}</string>
+											<string key="NSFrameSize">{515, 409}</string>
 											<reference key="NSSuperview" ref="697576577"/>
 											<reference key="NSWindow"/>
-											<reference key="NSNextKeyView" ref="967850626"/>
+											<reference key="NSNextKeyView" ref="953353448"/>
 											<string key="NSReuseIdentifierKey">_NS:414</string>
 										</object>
 									</array>
-									<string key="NSFrame">{{1, 1}, {515, 409}}</string>
+									<string key="NSFrame">{{1, 1}, {530, 424}}</string>
 									<reference key="NSSuperview" ref="254148824"/>
 									<reference key="NSWindow"/>
 									<reference key="NSNextKeyView" ref="506582686"/>
@@ -260,10 +260,10 @@
 								<object class="NSScroller" id="967850626">
 									<reference key="NSNextResponder" ref="254148824"/>
 									<int key="NSvFlags">256</int>
-									<string key="NSFrame">{{516, 1}, {15, 409}}</string>
+									<string key="NSFrame">{{516, 1}, {15, 418}}</string>
 									<reference key="NSSuperview" ref="254148824"/>
 									<reference key="NSWindow"/>
-									<reference key="NSNextKeyView" ref="953353448"/>
+									<reference key="NSNextKeyView"/>
 									<string key="NSReuseIdentifierKey">_NS:419</string>
 									<reference key="NSTarget" ref="254148824"/>
 									<string key="NSAction">_doScroller:</string>
@@ -273,10 +273,10 @@
 								<object class="NSScroller" id="953353448">
 									<reference key="NSNextResponder" ref="254148824"/>
 									<int key="NSvFlags">256</int>
-									<string key="NSFrame">{{1, 410}, {515, 15}}</string>
+									<string key="NSFrame">{{1, 410}, {524, 15}}</string>
 									<reference key="NSSuperview" ref="254148824"/>
 									<reference key="NSWindow"/>
-									<reference key="NSNextKeyView"/>
+									<reference key="NSNextKeyView" ref="967850626"/>
 									<string key="NSReuseIdentifierKey">_NS:423</string>
 									<int key="NSsFlags">1</int>
 									<reference key="NSTarget" ref="254148824"/>
@@ -301,19 +301,13 @@
 					<reference key="NSNextKeyView" ref="254148824"/>
 				</object>
 				<string key="NSScreenRect">{{0, 0}, {1440, 878}}</string>
-				<string key="NSMinSize">{94, 164}</string>
+				<string key="NSMinSize">{94, 155}</string>
 				<string key="NSMaxSize">{10000000000000, 10000000000000}</string>
 				<int key="NSWindowCollectionBehavior">128</int>
 				<bool key="NSWindowIsRestorable">YES</bool>
 			</object>
 			<object class="NSCustomObject" id="796877042">
 				<string key="NSClassName">NSApplication</string>
-			</object>
-			<object class="NSCustomObject" id="230789975">
-				<string key="NSClassName">NCWindowController</string>
-			</object>
-			<object class="NSCustomObject" id="99912823">
-				<string key="NSClassName">NCCanvasViewController</string>
 			</object>
 		</array>
 		<object class="IBObjectContainer" key="IBDocument.Objects">
@@ -327,36 +321,84 @@
 					<int key="connectionID">18</int>
 				</object>
 				<object class="IBConnectionRecord">
-					<object class="IBOutletConnection" key="connection">
-						<string key="label">delegate</string>
-						<reference key="source" ref="275939982"/>
-						<reference key="destination" ref="230789975"/>
+					<object class="IBActionConnection" key="connection">
+						<string key="label">selectAddNeuronButton:</string>
+						<reference key="source" ref="512844837"/>
+						<reference key="destination" ref="296767414"/>
 					</object>
-					<int key="connectionID">100085</int>
+					<int key="connectionID">100095</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBOutletConnection" key="connection">
 						<string key="label">addNeuronButton</string>
-						<reference key="source" ref="230789975"/>
+						<reference key="source" ref="512844837"/>
 						<reference key="destination" ref="296767414"/>
 					</object>
-					<int key="connectionID">100086</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBActionConnection" key="connection">
-						<string key="label">selectAddNeuronButton:</string>
-						<reference key="source" ref="230789975"/>
-						<reference key="destination" ref="296767414"/>
-					</object>
-					<int key="connectionID">100088</int>
+					<int key="connectionID">100096</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBOutletConnection" key="connection">
-						<string key="label">view</string>
-						<reference key="source" ref="99912823"/>
+						<string key="label">canvasView</string>
+						<reference key="source" ref="512844837"/>
 						<reference key="destination" ref="506582686"/>
 					</object>
-					<int key="connectionID">100091</int>
+					<int key="connectionID">100098</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBOutletConnection" key="connection">
+						<string key="label">selectButton</string>
+						<reference key="source" ref="512844837"/>
+						<reference key="destination" ref="911899782"/>
+					</object>
+					<int key="connectionID">100099</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBActionConnection" key="connection">
+						<string key="label">selectSelectButton:</string>
+						<reference key="source" ref="512844837"/>
+						<reference key="destination" ref="911899782"/>
+					</object>
+					<int key="connectionID">100100</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBActionConnection" key="connection">
+						<string key="label">selectAddConnectionButton:</string>
+						<reference key="source" ref="512844837"/>
+						<reference key="destination" ref="107543950"/>
+					</object>
+					<int key="connectionID">100101</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBActionConnection" key="connection">
+						<string key="label">selectAddStimulusButton:</string>
+						<reference key="source" ref="512844837"/>
+						<reference key="destination" ref="95185587"/>
+					</object>
+					<int key="connectionID">100102</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBOutletConnection" key="connection">
+						<string key="label">addConnectionButton</string>
+						<reference key="source" ref="512844837"/>
+						<reference key="destination" ref="107543950"/>
+					</object>
+					<int key="connectionID">100103</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBOutletConnection" key="connection">
+						<string key="label">addStimulusButton</string>
+						<reference key="source" ref="512844837"/>
+						<reference key="destination" ref="95185587"/>
+					</object>
+					<int key="connectionID">100104</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBOutletConnection" key="connection">
+						<string key="label">toolBar</string>
+						<reference key="source" ref="512844837"/>
+						<reference key="destination" ref="468395658"/>
+					</object>
+					<int key="connectionID">100105</int>
 				</object>
 			</array>
 			<object class="IBMutableOrderedSet" key="objectRecords">
@@ -472,16 +514,6 @@
 						<reference key="object" ref="95185587"/>
 						<reference key="parent" ref="468395658"/>
 					</object>
-					<object class="IBObjectRecord">
-						<int key="objectID">100084</int>
-						<reference key="object" ref="230789975"/>
-						<reference key="parent" ref="0"/>
-					</object>
-					<object class="IBObjectRecord">
-						<int key="objectID">100090</int>
-						<reference key="object" ref="99912823"/>
-						<reference key="parent" ref="0"/>
-					</object>
 				</array>
 			</object>
 			<dictionary class="NSMutableDictionary" key="flattenedProperties">
@@ -498,11 +530,17 @@
 				<string key="100066.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="100067.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="100078.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
+				<string key="100078.designableToolbarItemIdentifier">AddNeuronTool</string>
+				<boolean value="YES" key="100078.toolbarItem.selectable"/>
 				<string key="100079.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
+				<string key="100079.designableToolbarItemIdentifier">SelectionTool</string>
+				<boolean value="YES" key="100079.toolbarItem.selectable"/>
 				<string key="100080.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
+				<string key="100080.designableToolbarItemIdentifier">AddConnectionTool</string>
+				<boolean value="YES" key="100080.toolbarItem.selectable"/>
 				<string key="100081.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
-				<string key="100084.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
-				<string key="100090.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
+				<string key="100081.designableToolbarItemIdentifier">AddCurrentTool</string>
+				<boolean value="YES" key="100081.toolbarItem.selectable"/>
 				<string key="5.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="5.IBWindowTemplateEditedContentRect">{{133, 170}, {507, 413}}</string>
 				<boolean value="NO" key="5.NSWindowTemplate.visibleAtLaunch"/>
@@ -512,7 +550,7 @@
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">100091</int>
+			<int key="maxID">100105</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -525,39 +563,64 @@
 					</object>
 				</object>
 				<object class="IBPartialClassDescription">
-					<string key="className">NCCanvasViewController</string>
-					<string key="superclassName">NSViewController</string>
-					<object class="IBClassDescriptionSource" key="sourceIdentifier">
-						<string key="majorKey">IBProjectSource</string>
-						<string key="minorKey">./Classes/NCCanvasViewController.h</string>
-					</object>
-				</object>
-				<object class="IBPartialClassDescription">
 					<string key="className">NCWindowController</string>
 					<string key="superclassName">NSWindowController</string>
-					<object class="NSMutableDictionary" key="actions">
-						<string key="NS.key.0">selectAddNeuronButton:</string>
-						<string key="NS.object.0">id</string>
-					</object>
-					<object class="NSMutableDictionary" key="actionInfosByName">
-						<string key="NS.key.0">selectAddNeuronButton:</string>
-						<object class="IBActionInfo" key="NS.object.0">
+					<dictionary class="NSMutableDictionary" key="actions">
+						<string key="selectAddConnectionButton:">id</string>
+						<string key="selectAddNeuronButton:">id</string>
+						<string key="selectAddStimulusButton:">id</string>
+						<string key="selectSelectButton:">id</string>
+					</dictionary>
+					<dictionary class="NSMutableDictionary" key="actionInfosByName">
+						<object class="IBActionInfo" key="selectAddConnectionButton:">
+							<string key="name">selectAddConnectionButton:</string>
+							<string key="candidateClassName">id</string>
+						</object>
+						<object class="IBActionInfo" key="selectAddNeuronButton:">
 							<string key="name">selectAddNeuronButton:</string>
 							<string key="candidateClassName">id</string>
 						</object>
-					</object>
+						<object class="IBActionInfo" key="selectAddStimulusButton:">
+							<string key="name">selectAddStimulusButton:</string>
+							<string key="candidateClassName">id</string>
+						</object>
+						<object class="IBActionInfo" key="selectSelectButton:">
+							<string key="name">selectSelectButton:</string>
+							<string key="candidateClassName">id</string>
+						</object>
+					</dictionary>
 					<dictionary class="NSMutableDictionary" key="outlets">
+						<string key="addConnectionButton">NSToolbarItem</string>
 						<string key="addNeuronButton">NSToolbarItem</string>
+						<string key="addStimulusButton">NSToolbarItem</string>
 						<string key="canvasView">NCCanvasView</string>
+						<string key="selectButton">NSToolbarItem</string>
+						<string key="toolBar">NSToolbar</string>
 					</dictionary>
 					<dictionary class="NSMutableDictionary" key="toOneOutletInfosByName">
+						<object class="IBToOneOutletInfo" key="addConnectionButton">
+							<string key="name">addConnectionButton</string>
+							<string key="candidateClassName">NSToolbarItem</string>
+						</object>
 						<object class="IBToOneOutletInfo" key="addNeuronButton">
 							<string key="name">addNeuronButton</string>
+							<string key="candidateClassName">NSToolbarItem</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="addStimulusButton">
+							<string key="name">addStimulusButton</string>
 							<string key="candidateClassName">NSToolbarItem</string>
 						</object>
 						<object class="IBToOneOutletInfo" key="canvasView">
 							<string key="name">canvasView</string>
 							<string key="candidateClassName">NCCanvasView</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="selectButton">
+							<string key="name">selectButton</string>
+							<string key="candidateClassName">NSToolbarItem</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="toolBar">
+							<string key="name">toolBar</string>
+							<string key="candidateClassName">NSToolbar</string>
 						</object>
 					</dictionary>
 					<object class="IBClassDescriptionSource" key="sourceIdentifier">
@@ -571,55 +634,6 @@
 					<object class="IBClassDescriptionSource" key="sourceIdentifier">
 						<string key="majorKey">IBProjectSource</string>
 						<string key="minorKey">./Classes/NCZoomingScrollView.h</string>
-					</object>
-				</object>
-				<object class="IBPartialClassDescription">
-					<string key="className">NSDocument</string>
-					<dictionary class="NSMutableDictionary" key="actions">
-						<string key="printDocument:">id</string>
-						<string key="revertDocumentToSaved:">id</string>
-						<string key="runPageLayout:">id</string>
-						<string key="saveDocument:">id</string>
-						<string key="saveDocumentAs:">id</string>
-						<string key="saveDocumentTo:">id</string>
-					</dictionary>
-					<dictionary class="NSMutableDictionary" key="actionInfosByName">
-						<object class="IBActionInfo" key="printDocument:">
-							<string key="name">printDocument:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="revertDocumentToSaved:">
-							<string key="name">revertDocumentToSaved:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="runPageLayout:">
-							<string key="name">runPageLayout:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="saveDocument:">
-							<string key="name">saveDocument:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="saveDocumentAs:">
-							<string key="name">saveDocumentAs:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="saveDocumentTo:">
-							<string key="name">saveDocumentTo:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-					</dictionary>
-					<object class="IBClassDescriptionSource" key="sourceIdentifier">
-						<string key="majorKey">IBProjectSource</string>
-						<string key="minorKey">./Classes/NSDocument.h</string>
-					</object>
-				</object>
-				<object class="IBPartialClassDescription">
-					<string key="className">NeuralCanvasDocument</string>
-					<string key="superclassName">NSDocument</string>
-					<object class="IBClassDescriptionSource" key="sourceIdentifier">
-						<string key="majorKey">IBProjectSource</string>
-						<string key="minorKey">./Classes/NeuralCanvasDocument.h</string>
 					</object>
 				</object>
 			</array>

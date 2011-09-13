@@ -10,27 +10,33 @@
 
 @implementation NeuralCanvasDocument
 
+@synthesize canvas;
+
 - (id)init
 {
     self = [super init];
     if (self) {
-        // Add your subclass-specific initialization here.
-        // If an error occurs here, send a [self release] message and return nil.
+        
+        // Setup our canvas for this document.
+        // Initially it is blank but we could load in a canvas from a file.
+        [self setCanvas:[[NCCanvas alloc] init]]; 
     }
     return self;
 }
 
-- (NSString *)windowNibName
+- (void)makeWindowControllers
 {
-    // Override returning the nib file name of the document
-    // If you need to use a subclass of NSWindowController or if your document supports multiple NSWindowControllers, you should remove this method and override -makeWindowControllers instead.
-    return @"NeuralCanvasDocument";
+    
+    NCWindowController *windowController = [[NCWindowController
+                                            allocWithZone:[self zone]] initWithWindowNibName:@"NeuralCanvasDocument"];
+    [self addWindowController:windowController];
+    [windowController release];
 }
+
 
 - (void)windowControllerDidLoadNib:(NSWindowController *)aController
 {
     [super windowControllerDidLoadNib:aController];
-    // Add any code here that needs to be executed once the windowController has loaded the document's window.
 }
 
 - (NSData *)dataOfType:(NSString *)typeName error:(NSError **)outError

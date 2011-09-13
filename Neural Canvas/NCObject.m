@@ -8,7 +8,10 @@
 
 #import "NCObject.h"
 
+
 @implementation NCObject
+
+@synthesize location;
 
 - (id)init
 {
@@ -19,5 +22,6 @@
     
     return self;
 }
+
 
 @end

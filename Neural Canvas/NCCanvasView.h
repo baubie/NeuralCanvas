@@ -8,6 +8,16 @@
 
 #import <Cocoa/Cocoa.h>
 
-@interface NCCanvasView : NSView
+extern NSString *NCSelectedAddNeuronToolNotification;
+extern NSString *NCSelectedSelectToolNotification;
+extern NSString *NCSelectedAddConnectionToolNotification;
+extern NSString *NCSelectedAddStimulusToolNotification;
+
+@interface NCCanvasView : NSView 
+
+- (void)selectedToolChanged:(NSNotification *)notification;
+- (void)setCursor;
+
+@property (nonatomic) int currentTool;
 
 @end

@@ -8,21 +8,19 @@
 
 #import "NCWindowController.h"
 
-
-NSString *NCSelectedToolDidChangeNotification = @"NCSelectedToolDidChange";
+NSString *NCSelectedSelectToolNotification = @"NCSelectedSelectTool";
+NSString *NCSelectedAddNeuronToolNotification = @"NCSelectedAddNeuronTool";
+NSString *NCSelectedAddConnectionToolNotification = @"NCSelectedAddConnectionTool";
+NSString *NCSelectedAddStimulusToolNotification = @"NCSelectedAddStimulusTool";
 
 
 @implementation NCWindowController
-
-@synthesize addNeuronButton;
-@synthesize canvasView;
 
 
 - (id)initWithWindow:(NSWindow *)window
 {
     self = [super initWithWindow:window];
     if (self) {
-        // Initialization code here.
     }
     
     return self;
@@ -32,12 +30,39 @@ NSString *NCSelectedToolDidChangeNotification = @"NCSelectedToolDidChange";
 {
     [super windowDidLoad];
     
+    // Select the Selection Tool by default
+    [toolBar setSelectedItemIdentifier:@"SelectionTool"];    
+}
+
+- (void) resetToolbar
+{
+    [toolBar setSelectedItemIdentifier:@"SelectionTool"];    
+}
+
+- (void) redrawCanvas
+{
+    [canvasView display];
+}
+
+
+- (IBAction)selectSelectButton: (id) pId
+{
+    [[NSNotificationCenter defaultCenter] postNotificationName:NCSelectedSelectToolNotification object:self];
 }
 
 - (IBAction)selectAddNeuronButton: (id)pId
 {
-    [[NSNotificationCenter defaultCenter] postNotificationName:NCSelectedToolDidChangeNotification object:self];
+    [[NSNotificationCenter defaultCenter] postNotificationName:NCSelectedAddNeuronToolNotification object:self];
+}
 
+- (IBAction)selectAddConnectionButton: (id)pId
+{
+    [[NSNotificationCenter defaultCenter] postNotificationName:NCSelectedAddConnectionToolNotification object:self];
+}
+
+- (IBAction)selectAddStimulusButton: (id)pId
+{
+    [[NSNotificationCenter defaultCenter] postNotificationName:NCSelectedAddStimulusToolNotification object:self];
 }
 
 

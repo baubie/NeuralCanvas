@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CA1EC6E5141FFE5600B33941 /* neuron.png in Resources */ = {isa = PBXBuildFile; fileRef = CA1EC6E4141FFE5600B33941 /* neuron.png */; };
 		CA404DC11413E16000D8A58C /* iconNeuron.png in Resources */ = {isa = PBXBuildFile; fileRef = CA404DC01413E16000D8A58C /* iconNeuron.png */; };
 		CA404DC51413E3DE00D8A58C /* iconConnection.png in Resources */ = {isa = PBXBuildFile; fileRef = CA404DC21413E3DE00D8A58C /* iconConnection.png */; };
 		CA404DC61413E3DE00D8A58C /* iconCurrent.png in Resources */ = {isa = PBXBuildFile; fileRef = CA404DC31413E3DE00D8A58C /* iconCurrent.png */; };
@@ -23,13 +24,13 @@
 		CA77A75214112F14006E3AF7 /* roadmap.txt in Resources */ = {isa = PBXBuildFile; fileRef = CA77A75114112F14006E3AF7 /* roadmap.txt */; };
 		CA8802AE141D190400A54299 /* NCCanvasView.m in Sources */ = {isa = PBXBuildFile; fileRef = CA8802AD141D190400A54299 /* NCCanvasView.m */; };
 		CA8802B2141D464C00A54299 /* NCCanvas.m in Sources */ = {isa = PBXBuildFile; fileRef = CA8802B1141D464C00A54299 /* NCCanvas.m */; };
-		CA8802B6141D47E400A54299 /* NCCanvasViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA8802B4141D47E400A54299 /* NCCanvasViewController.m */; };
 		CA9198D913F8655E00677F57 /* NCZoomingScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = CA9198D813F8655E00677F57 /* NCZoomingScrollView.m */; };
 		CA9E8C1D1407368D008CFBDA /* NCWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA9E8C1C1407368D008CFBDA /* NCWindowController.m */; };
 		CAB4D4DB141064AE00F65F9F /* NCAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CAB4D4DA141064AE00F65F9F /* NCAppDelegate.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CA1EC6E4141FFE5600B33941 /* neuron.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = neuron.png; path = Media/neuron.png; sourceTree = SOURCE_ROOT; };
 		CA404DC01413E16000D8A58C /* iconNeuron.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = iconNeuron.png; path = ../Media/iconNeuron.png; sourceTree = "<group>"; };
 		CA404DC21413E3DE00D8A58C /* iconConnection.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = iconConnection.png; path = Media/iconConnection.png; sourceTree = SOURCE_ROOT; };
 		CA404DC31413E3DE00D8A58C /* iconCurrent.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = iconCurrent.png; path = Media/iconCurrent.png; sourceTree = SOURCE_ROOT; };
@@ -57,8 +58,6 @@
 		CA8802AD141D190400A54299 /* NCCanvasView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCCanvasView.m; sourceTree = "<group>"; };
 		CA8802B0141D464C00A54299 /* NCCanvas.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCCanvas.h; sourceTree = "<group>"; };
 		CA8802B1141D464C00A54299 /* NCCanvas.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCCanvas.m; sourceTree = "<group>"; };
-		CA8802B3141D47E400A54299 /* NCCanvasViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCCanvasViewController.h; sourceTree = "<group>"; };
-		CA8802B4141D47E400A54299 /* NCCanvasViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCCanvasViewController.m; sourceTree = "<group>"; };
 		CA9198D713F8655E00677F57 /* NCZoomingScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCZoomingScrollView.h; sourceTree = "<group>"; };
 		CA9198D813F8655E00677F57 /* NCZoomingScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCZoomingScrollView.m; sourceTree = "<group>"; };
 		CA9E8C1B1407368D008CFBDA /* NCWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCWindowController.h; sourceTree = "<group>"; };
@@ -120,20 +119,18 @@
 			children = (
 				CA50B9ED13F6CAD9006D6F5B /* NeuralCanvasDocument.h */,
 				CA50B9EE13F6CAD9006D6F5B /* NeuralCanvasDocument.m */,
-				CA8802B0141D464C00A54299 /* NCCanvas.h */,
-				CA8802B1141D464C00A54299 /* NCCanvas.m */,
-				CA9198D713F8655E00677F57 /* NCZoomingScrollView.h */,
-				CA9198D813F8655E00677F57 /* NCZoomingScrollView.m */,
-				CA8802AC141D190400A54299 /* NCCanvasView.h */,
-				CA8802B3141D47E400A54299 /* NCCanvasViewController.h */,
-				CA8802B4141D47E400A54299 /* NCCanvasViewController.m */,
-				CA8802AD141D190400A54299 /* NCCanvasView.m */,
 				CA9E8C1B1407368D008CFBDA /* NCWindowController.h */,
 				CA9E8C1C1407368D008CFBDA /* NCWindowController.m */,
+				CA8802B0141D464C00A54299 /* NCCanvas.h */,
+				CA8802B1141D464C00A54299 /* NCCanvas.m */,
 				CA404DCB1413EC1400D8A58C /* NCNeuron.h */,
 				CA404DCC1413EC1400D8A58C /* NCNeuron.m */,
 				CA404DC81413EBFE00D8A58C /* NCObject.h */,
 				CA404DC91413EBFE00D8A58C /* NCObject.m */,
+				CA9198D713F8655E00677F57 /* NCZoomingScrollView.h */,
+				CA9198D813F8655E00677F57 /* NCZoomingScrollView.m */,
+				CA8802AC141D190400A54299 /* NCCanvasView.h */,
+				CA8802AD141D190400A54299 /* NCCanvasView.m */,
 				CAB4D4D9141064AE00F65F9F /* NCAppDelegate.h */,
 				CAB4D4DA141064AE00F65F9F /* NCAppDelegate.m */,
 				CA9E8C1E1407390E008CFBDA /* Resources */,
@@ -158,11 +155,12 @@
 		CA9E8C1E1407390E008CFBDA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				CA1EC6E4141FFE5600B33941 /* neuron.png */,
 				CA404DC01413E16000D8A58C /* iconNeuron.png */,
-				CA50B9F013F6CAD9006D6F5B /* NeuralCanvasDocument.xib */,
 				CA404DC21413E3DE00D8A58C /* iconConnection.png */,
 				CA404DC31413E3DE00D8A58C /* iconCurrent.png */,
 				CA404DC41413E3DE00D8A58C /* iconSelect.png */,
+				CA50B9F013F6CAD9006D6F5B /* NeuralCanvasDocument.xib */,
 				CA50B9F313F6CAD9006D6F5B /* MainMenu.xib */,
 			);
 			name = Resources;
@@ -227,6 +225,7 @@
 				CA404DC51413E3DE00D8A58C /* iconConnection.png in Resources */,
 				CA404DC61413E3DE00D8A58C /* iconCurrent.png in Resources */,
 				CA404DC71413E3DE00D8A58C /* iconSelect.png in Resources */,
+				CA1EC6E5141FFE5600B33941 /* neuron.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -246,7 +245,6 @@
 				CA404DCD1413EC1400D8A58C /* NCNeuron.m in Sources */,
 				CA8802AE141D190400A54299 /* NCCanvasView.m in Sources */,
 				CA8802B2141D464C00A54299 /* NCCanvas.m in Sources */,
-				CA8802B6141D47E400A54299 /* NCCanvasViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

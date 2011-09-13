@@ -9,23 +9,27 @@
 #import <Cocoa/Cocoa.h>
 #import "NCCanvasView.h"
 
-enum {
-    modeSelect = 0,
-    modeAddNeuron,
-    modeAddConnection,
-    modeAddStimulus,
-};
+extern NSString *NCSelectedAddNeuronToolNotification;
+extern NSString *NCSelectedSelectToolNotification;
+extern NSString *NCSelectedAddConnectionToolNotification;
+extern NSString *NCSelectedAddStimulusToolNotification;
 
-@interface NCWindowController : NSWindowController
+@interface NCWindowController : NSWindowController {
 
+    IBOutlet NSToolbar  *toolBar;
+    IBOutlet NSToolbarItem *selectButton;
+    IBOutlet NSToolbarItem *addNeuronButton;
+    IBOutlet NSToolbarItem *addConnectionButton;
+    IBOutlet NSToolbarItem *addStimulusButton;
+    IBOutlet NCCanvasView *canvasView;
+    
+}
+- (IBAction)selectSelectButton: (id) pId;
 - (IBAction)selectAddNeuronButton: (id) pId;
-@property (nonatomic, retain) IBOutlet NSToolbarItem *addNeuronButton;
+- (IBAction)selectAddConnectionButton: (id) pId;
+- (IBAction)selectAddStimulusButton: (id) pId;
 
-
-@property (nonatomic, retain) IBOutlet NCCanvasView *canvasView;
-
+- (void) resetToolbar;
+- (void) redrawCanvas;
 
 @end
-
-
-int currentMode;

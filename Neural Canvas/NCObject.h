@@ -10,4 +10,7 @@
 
 @interface NCObject : NSObject
 
+@property (nonatomic) NSPoint location;
+
 @end
+

@@ -7,10 +7,13 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import "NCWindowController.h"
 #import "NCCanvas.h"
 
 @interface NeuralCanvasDocument : NSDocument {
     
 }
+
+@property (nonatomic, retain) NCCanvas* canvas;
 
 @end
