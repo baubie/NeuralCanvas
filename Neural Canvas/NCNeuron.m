@@ -25,7 +25,7 @@
     [view lockFocus];
     NSRect neuronRect;
     neuronRect.origin = self.location;
-    neuronRect.size.width = 50;
+    neuronRect.size.width = 30;
     neuronRect.size.height = 30;
     NSColor* fillColor = [NSColor blueColor];
     [fillColor set];
