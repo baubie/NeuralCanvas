@@ -7,17 +7,30 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import "NCCanvas.h"
 
 extern NSString *NCSelectedAddNeuronToolNotification;
 extern NSString *NCSelectedSelectToolNotification;
 extern NSString *NCSelectedAddConnectionToolNotification;
 extern NSString *NCSelectedAddStimulusToolNotification;
 
-@interface NCCanvasView : NSView 
+@interface NCCanvasView : NSView {
+    
+    NSPoint canvasOffset;
+}
 
 - (void)selectedToolChanged:(NSNotification *)notification;
 - (void)setCursor;
 
+- (NSPoint)screenPointFromDocPoint:(NSPoint)point;
+- (NSPoint)docPointFromScreenPoint:(NSPoint)point;
+
+
+- (void) drawGrid;
+- (void) drawObjects;
+
 @property (nonatomic) int currentTool;
+@property (nonatomic,retain) NCCanvas* canvas;
+
 
 @end

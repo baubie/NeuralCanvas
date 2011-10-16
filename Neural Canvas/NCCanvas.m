@@ -41,13 +41,6 @@
     return true;
 }
 
-- (void)drawRect:(NSRect)dirtyRect onView:(NSView*)view
-{
-    // Loop over all objects
-    for(int i = 0; i < [objects count]; i++) {
-        [[objects objectAtIndex:i] drawInView:view];
-    }
-}
 
 
 @end

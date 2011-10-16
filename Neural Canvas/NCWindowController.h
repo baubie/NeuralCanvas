@@ -24,6 +24,8 @@ extern NSString *NCSelectedAddStimulusToolNotification;
     IBOutlet NCCanvasView *canvasView;
     
 }
+
+- (void) setCanvas: (NCCanvas*) canvas;
 - (IBAction)selectSelectButton: (id) pId;
 - (IBAction)selectAddNeuronButton: (id) pId;
 - (IBAction)selectAddConnectionButton: (id) pId;
@@ -31,5 +33,8 @@ extern NSString *NCSelectedAddStimulusToolNotification;
 
 - (void) resetToolbar;
 - (void) redrawCanvas;
+
+@property (nonatomic,retain) NCCanvas* canvas;
+
 
 @end

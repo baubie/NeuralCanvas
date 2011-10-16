@@ -26,10 +26,12 @@
 
 - (void)makeWindowControllers
 {
-    
     NCWindowController *windowController = [[NCWindowController
-                                            allocWithZone:[self zone]] initWithWindowNibName:@"NeuralCanvasDocument"];
+                            allocWithZone:[self zone]] initWithWindowNibName:@"NeuralCanvasDocument"];
+
     [self addWindowController:windowController];
+    [windowController setCanvas:[self canvas]];
+    // Pass the canvas into our Canvas View
     [windowController release];
 }
 

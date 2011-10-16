@@ -27,6 +27,8 @@
     neuronRect.origin = self.location;
     neuronRect.size.width = 30;
     neuronRect.size.height = 30;
+    neuronRect.origin.x -= 20;
+    neuronRect.origin.y -= 30;
     NSColor* fillColor = [NSColor blueColor];
     [fillColor set];
     NSBezierPath *path = [NSBezierPath bezierPathWithOvalInRect:neuronRect];
@@ -39,13 +41,7 @@
 + (NSCursor *)creationCursor {
     
     // By default we use the crosshairs cursor.
-    static NSCursor *crosshairsCursor = nil;
-    if (!crosshairsCursor) {
-        NSImage *crosshairsImage = [NSImage imageNamed:@"iconNeuron.png"];
-        NSSize crosshairsImageSize = [crosshairsImage size];
-        crosshairsCursor = [[NSCursor alloc] initWithImage:crosshairsImage hotSpot:NSMakePoint((crosshairsImageSize.width / 2.0), (crosshairsImageSize.height / 2.0))];
-    }
-    return crosshairsCursor;
+    return [NSCursor crosshairCursor];
 }
 
 @end

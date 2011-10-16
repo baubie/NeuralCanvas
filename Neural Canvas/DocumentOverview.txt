@@ -1,0 +1,1 @@
+The document co-ordinates are arbitrary with (0,0) located at the centre of the window.

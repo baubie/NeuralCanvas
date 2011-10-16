@@ -12,8 +12,9 @@
 
 @interface NeuralCanvasDocument : NSDocument {
     
+    
 }
 
-@property (nonatomic, retain) NCCanvas* canvas;
+@property (nonatomic,retain) NCCanvas* canvas;
 
 @end

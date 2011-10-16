@@ -16,6 +16,7 @@ NSString *NCSelectedAddStimulusToolNotification = @"NCSelectedAddStimulusTool";
 
 @implementation NCWindowController
 
+@synthesize canvas;
 
 - (id)initWithWindow:(NSWindow *)window
 {
@@ -31,7 +32,10 @@ NSString *NCSelectedAddStimulusToolNotification = @"NCSelectedAddStimulusTool";
     [super windowDidLoad];
     
     // Select the Selection Tool by default
-    [toolBar setSelectedItemIdentifier:@"SelectionTool"];    
+    [toolBar setSelectedItemIdentifier:@"SelectionTool"];  
+    
+    // Pass the canvas into our canvas view
+    [canvasView setCanvas:[self canvas]];
 }
 
 - (void) resetToolbar
@@ -41,7 +45,7 @@ NSString *NCSelectedAddStimulusToolNotification = @"NCSelectedAddStimulusTool";
 
 - (void) redrawCanvas
 {
-    [canvasView display];
+    [canvasView setNeedsDisplay:YES];
 }
 
 
