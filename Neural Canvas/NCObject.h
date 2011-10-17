@@ -10,6 +10,11 @@
 
 @interface NCObject : NSObject
 
+- (void)drawAtPoint:(NSPoint) point withScale: (float)scale;
+- (BOOL)containsDocumentPoint:(NSPoint) point;
+- (NSSize)size;
+
+
 @property (nonatomic) NSPoint location;
 
 @end

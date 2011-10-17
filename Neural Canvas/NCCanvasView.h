@@ -17,6 +17,10 @@ extern NSString *NCSelectedAddStimulusToolNotification;
 @interface NCCanvasView : NSView {
     
     NSPoint canvasOffset;
+    float canvasScale;
+    NSPoint lastDragLocation;
+    
+    NCObject* draggingObject;
 }
 
 - (void)selectedToolChanged:(NSNotification *)notification;

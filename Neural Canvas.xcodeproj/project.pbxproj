@@ -190,6 +190,7 @@
 		CA50B9CE13F6CAD8006D6F5B /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastUpgradeCheck = 0420;
 				ORGANIZATIONNAME = "McMaster University";
 			};
 			buildConfigurationList = CA50B9D113F6CAD8006D6F5B /* Build configuration list for PBXProject "Neural Canvas" */;

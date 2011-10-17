@@ -23,5 +23,25 @@
     return self;
 }
 
+- (void)drawAtPoint:(NSPoint) point withScale: (float)scale
+{
+    // To be implemented by objects
+    return;
+}
+
+- (BOOL)containsDocumentPoint:(NSPoint) point
+{
+    // To be implemented by objects    
+    return NO;
+}
+
+- (NSSize)size
+{
+    // To be implemented by objects        
+    NSSize r;
+    return r;
+}
+
+
 
 @end

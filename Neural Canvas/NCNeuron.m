@@ -20,23 +20,41 @@
     return self;
 }
 
-- (void)drawInView:(NSView*) view
+- (void)drawAtPoint:(NSPoint) point withScale: (float)scale
 {
-    [view lockFocus];
     NSRect neuronRect;
-    neuronRect.origin = self.location;
-    neuronRect.size.width = 30;
-    neuronRect.size.height = 30;
-    neuronRect.origin.x -= 20;
-    neuronRect.origin.y -= 30;
+    neuronRect.origin = point;
+    neuronRect.size = [self size];
+    neuronRect.size.width *= scale;
+    neuronRect.size.height *= scale;
+    neuronRect.origin.x -= 15*scale;
+    neuronRect.origin.y -= 15*scale;
     NSColor* fillColor = [NSColor blueColor];
     [fillColor set];
     NSBezierPath *path = [NSBezierPath bezierPathWithOvalInRect:neuronRect];
     [path fill];
     [path setLineWidth:5];
-    [view unlockFocus];
 }
 
+- (BOOL)containsDocumentPoint:(NSPoint) point
+{
+    NSPoint location = [self location];
+    NSSize size = [self size];
+      
+    return (
+            point.x >= location.x-size.width*0.5 &&
+            point.x <= location.x+size.width*0.5 &&
+            point.y >= location.y-size.height*0.5 &&
+            point.y <= location.y+size.height*0.5
+            );
+            
+}
+
+- (NSSize)size
+{
+    NSSize r = {30,30};
+    return r;
+}
 
 + (NSCursor *)creationCursor {
     

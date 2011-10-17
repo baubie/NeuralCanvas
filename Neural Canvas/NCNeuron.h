@@ -10,6 +10,5 @@
 
 @interface NCNeuron : NCObject
 
-- (void)drawInView:(NSView*) view;
 + (NSCursor *)creationCursor;
 @end

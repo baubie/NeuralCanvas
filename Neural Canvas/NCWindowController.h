@@ -23,6 +23,8 @@ extern NSString *NCSelectedAddStimulusToolNotification;
     IBOutlet NSToolbarItem *addStimulusButton;
     IBOutlet NCCanvasView *canvasView;
     
+    IBOutlet NSTextField* statusbarLeftLabel;
+    
 }
 
 - (void) setCanvas: (NCCanvas*) canvas;
@@ -33,6 +35,8 @@ extern NSString *NCSelectedAddStimulusToolNotification;
 
 - (void) resetToolbar;
 - (void) redrawCanvas;
+
+- (void) updateStatusBarText:(NSString*) text;
 
 @property (nonatomic,retain) NCCanvas* canvas;
 

@@ -36,6 +36,10 @@ NSString *NCSelectedAddStimulusToolNotification = @"NCSelectedAddStimulusTool";
     
     // Pass the canvas into our canvas view
     [canvasView setCanvas:[self canvas]];
+    
+    [[self window] setAutorecalculatesContentBorderThickness:YES forEdge:NSMinYEdge];
+    [[self window] setContentBorderThickness:24 forEdge:NSMinYEdge];    
+    [[self window] setAcceptsMouseMovedEvents:YES];
 }
 
 - (void) resetToolbar
@@ -47,6 +51,12 @@ NSString *NCSelectedAddStimulusToolNotification = @"NCSelectedAddStimulusTool";
 {
     [canvasView setNeedsDisplay:YES];
 }
+
+- (void) updateStatusBarText:(NSString*) text
+{
+    [statusbarLeftLabel setTitleWithMnemonic:text]; 
+}
+
 
 
 - (IBAction)selectSelectButton: (id) pId
