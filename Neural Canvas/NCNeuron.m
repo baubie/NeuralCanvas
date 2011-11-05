@@ -22,6 +22,20 @@
 
 - (void)drawAtPoint:(NSPoint) point withScale: (float)scale
 {
+    
+    NSShadow *shadow = [[[NSShadow alloc] init] autorelease];
+    [shadow setShadowOffset: NSMakeSize(1, -1)];
+    [shadow setShadowBlurRadius: 4];
+    [shadow setShadowColor: [NSColor blackColor]];
+    
+    if ([self selected])
+    {
+        [shadow setShadowOffset: NSMakeSize(3, -3)];
+        [shadow setShadowBlurRadius: 10]; 
+        scale *= 1.1;
+    }
+    
+    
     NSRect neuronRect;
     neuronRect.origin = point;
     neuronRect.size = [self size];
@@ -29,11 +43,20 @@
     neuronRect.size.height *= scale;
     neuronRect.origin.x -= 15*scale;
     neuronRect.origin.y -= 15*scale;
-    NSColor* fillColor = [NSColor blueColor];
+    NSColor* fillColor;
+    fillColor = [NSColor blueColor];
     [fillColor set];
+    
+    [shadow set];
+
     NSBezierPath *path = [NSBezierPath bezierPathWithOvalInRect:neuronRect];
+
+    [path setLineWidth:0];
+
+    [path stroke];
+    
     [path fill];
-    [path setLineWidth:5];
+    
 }
 
 - (BOOL)containsDocumentPoint:(NSPoint) point

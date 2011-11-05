@@ -246,11 +246,12 @@ enum {
     lastDragLocation = [self convertPoint:[theEvent locationInWindow] fromView:nil];
 
     // First, figure out if we mouse downed on an object.
-    for(int i = 0; i < [[[self canvas] objects] count]; i++) {
+    for(int i = (int)[[[self canvas] objects] count]-1; i >= 0 ; i--) {
         NCObject* obj = [[[self canvas] objects] objectAtIndex:i];
         if ([obj containsDocumentPoint:[self docPointFromScreenPoint:[self convertPoint:[theEvent locationInWindow] fromView:nil]]]) 
         {
             draggingObject = obj;
+            [draggingObject setSelected:YES];
             return;
         }
     }     
@@ -283,7 +284,9 @@ enum {
 {
     [super mouseUp:theEvent];
     // If the mouse is ever up, definitely stop dragging an object.
+    [draggingObject setSelected:NO];    
     draggingObject = nil;
+    [self setNeedsDisplay:YES];
 }
 
 
@@ -310,11 +313,13 @@ enum {
 
 - (void)mouseMoved:(NSEvent *)theEvent
 {
+    /*
     NSPoint p = [self convertPoint:[theEvent locationInWindow] fromView:nil];
     NSPoint dp = [self docPointFromScreenPoint:p];
     NSPoint sp = [self screenPointFromDocPoint:dp];
     NSString *s = [NSString stringWithFormat:@"View: (%f,%f)  Document: (%f,%f)  ViewFD: (%f,%f)", p.x, p.y, dp.x, dp.y,sp.x,sp.y];
     [[[self window] windowController] updateStatusBarText:s];
+    */
 }
 
 

@@ -16,6 +16,7 @@
 
 
 @property (nonatomic) NSPoint location;
+@property (nonatomic) BOOL selected;
 
 @end
 

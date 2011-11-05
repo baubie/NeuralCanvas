@@ -12,6 +12,7 @@
 @implementation NCObject
 
 @synthesize location;
+@synthesize selected;
 
 - (id)init
 {
