@@ -14,6 +14,9 @@
 - (BOOL)containsDocumentPoint:(NSPoint) point;
 - (NSSize)size;
 
+- (void)updateWithTimestep:(double) dt;
+- (void)initialize;
+
 
 @property (nonatomic) NSPoint location;
 @property (nonatomic) BOOL selected;

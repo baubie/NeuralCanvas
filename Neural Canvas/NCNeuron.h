@@ -7,8 +7,12 @@
 //
 
 #include "NCObject.h"
+#include "NCLIF.h"
 
-@interface NCNeuron : NCObject
+@interface NCNeuron : NCObject {
+    
+    NCNeuronModel *model;
+}
 
-+ (NSCursor *)creationCursor;
+    + (NSCursor *)creationCursor;
 @end
