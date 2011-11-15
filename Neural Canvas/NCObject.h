@@ -17,9 +17,12 @@
 - (void)updateWithTimestep:(double) dt;
 - (void)initialize;
 
+- (double)getTraceValueAtIndex:(int) index;
+
 
 @property (nonatomic) NSPoint location;
 @property (nonatomic) BOOL selected;
+@property (nonatomic) BOOL hovered;
 
 @end
 

@@ -25,7 +25,10 @@
 		CA77A75214112F14006E3AF7 /* roadmap.txt in Resources */ = {isa = PBXBuildFile; fileRef = CA77A75114112F14006E3AF7 /* roadmap.txt */; };
 		CA8802AE141D190400A54299 /* NCCanvasView.mm in Sources */ = {isa = PBXBuildFile; fileRef = CA8802AD141D190400A54299 /* NCCanvasView.mm */; };
 		CA8802B2141D464C00A54299 /* NCCanvas.mm in Sources */ = {isa = PBXBuildFile; fileRef = CA8802B1141D464C00A54299 /* NCCanvas.mm */; };
+		CA96AFB31471F0DC0001F942 /* NCOverlayView.mm in Sources */ = {isa = PBXBuildFile; fileRef = CA96AFB21471F0DC0001F942 /* NCOverlayView.mm */; };
 		CA9E8C1D1407368D008CFBDA /* NCWindowController.mm in Sources */ = {isa = PBXBuildFile; fileRef = CA9E8C1C1407368D008CFBDA /* NCWindowController.mm */; };
+		CAA7F46D147193F300557A4C /* NCOpenGLScope.mm in Sources */ = {isa = PBXBuildFile; fileRef = CAA7F46C147193F300557A4C /* NCOpenGLScope.mm */; };
+		CAA7F46F1471955D00557A4C /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAA7F46E1471955D00557A4C /* OpenGL.framework */; };
 		CAB4D4DB141064AE00F65F9F /* NCAppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = CAB4D4DA141064AE00F65F9F /* NCAppDelegate.mm */; };
 		CAEC305B144A2063006B271A /* DocumentOverview.txt in Resources */ = {isa = PBXBuildFile; fileRef = CAEC305A144A2063006B271A /* DocumentOverview.txt */; };
 /* End PBXBuildFile section */
@@ -61,8 +64,13 @@
 		CA8802AD141D190400A54299 /* NCCanvasView.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = NCCanvasView.mm; sourceTree = "<group>"; };
 		CA8802B0141D464C00A54299 /* NCCanvas.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCCanvas.h; sourceTree = "<group>"; };
 		CA8802B1141D464C00A54299 /* NCCanvas.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = NCCanvas.mm; sourceTree = "<group>"; };
+		CA96AFB11471F0DC0001F942 /* NCOverlayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCOverlayView.h; sourceTree = "<group>"; };
+		CA96AFB21471F0DC0001F942 /* NCOverlayView.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = NCOverlayView.mm; sourceTree = "<group>"; };
 		CA9E8C1B1407368D008CFBDA /* NCWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCWindowController.h; sourceTree = "<group>"; };
 		CA9E8C1C1407368D008CFBDA /* NCWindowController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = NCWindowController.mm; sourceTree = "<group>"; };
+		CAA7F46B147193F300557A4C /* NCOpenGLScope.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCOpenGLScope.h; sourceTree = "<group>"; };
+		CAA7F46C147193F300557A4C /* NCOpenGLScope.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = NCOpenGLScope.mm; sourceTree = "<group>"; };
+		CAA7F46E1471955D00557A4C /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = ../../../../System/Library/Frameworks/OpenGL.framework; sourceTree = "<group>"; };
 		CAB4D4D9141064AE00F65F9F /* NCAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCAppDelegate.h; sourceTree = "<group>"; };
 		CAB4D4DA141064AE00F65F9F /* NCAppDelegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = NCAppDelegate.mm; sourceTree = "<group>"; };
 		CAE792D81467256D0059982A /* NCLIF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCLIF.h; sourceTree = "<group>"; };
@@ -75,6 +83,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CA50B9DC13F6CAD8006D6F5B /* Cocoa.framework in Frameworks */,
+				CAA7F46F1471955D00557A4C /* OpenGL.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -101,6 +110,7 @@
 		CA50B9DA13F6CAD8006D6F5B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CAA7F46E1471955D00557A4C /* OpenGL.framework */,
 				CA50B9DB13F6CAD8006D6F5B /* Cocoa.framework */,
 				CA50B9DD13F6CAD8006D6F5B /* Other Frameworks */,
 			);
@@ -126,15 +136,19 @@
 				CA9E8C1C1407368D008CFBDA /* NCWindowController.mm */,
 				CA8802B0141D464C00A54299 /* NCCanvas.h */,
 				CA8802B1141D464C00A54299 /* NCCanvas.mm */,
+				CAA7F46B147193F300557A4C /* NCOpenGLScope.h */,
+				CAA7F46C147193F300557A4C /* NCOpenGLScope.mm */,
 				CA404DCB1413EC1400D8A58C /* NCNeuron.h */,
 				CA404DCC1413EC1400D8A58C /* NCNeuron.mm */,
-				CAE792DA146725740059982A /* Neuron Types */,
 				CA404DC81413EBFE00D8A58C /* NCObject.h */,
 				CA404DC91413EBFE00D8A58C /* NCObject.mm */,
 				CA8802AC141D190400A54299 /* NCCanvasView.h */,
 				CA8802AD141D190400A54299 /* NCCanvasView.mm */,
 				CAB4D4D9141064AE00F65F9F /* NCAppDelegate.h */,
 				CAB4D4DA141064AE00F65F9F /* NCAppDelegate.mm */,
+				CA96AFB11471F0DC0001F942 /* NCOverlayView.h */,
+				CA96AFB21471F0DC0001F942 /* NCOverlayView.mm */,
+				CAE792DA146725740059982A /* Neuron Types */,
 				CA9E8C1E1407390E008CFBDA /* Resources */,
 				CA50B9E213F6CAD8006D6F5B /* Supporting Files */,
 			);
@@ -260,6 +274,8 @@
 				CA8802AE141D190400A54299 /* NCCanvasView.mm in Sources */,
 				CA8802B2141D464C00A54299 /* NCCanvas.mm in Sources */,
 				CA14A75A1466E441005FD186 /* NCLIF.cpp in Sources */,
+				CAA7F46D147193F300557A4C /* NCOpenGLScope.mm in Sources */,
+				CA96AFB31471F0DC0001F942 /* NCOverlayView.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

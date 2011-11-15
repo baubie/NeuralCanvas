@@ -79,6 +79,16 @@ NSString *NCSelectedAddStimulusToolNotification = @"NCSelectedAddStimulusTool";
     [[NSNotificationCenter defaultCenter] postNotificationName:NCSelectedAddStimulusToolNotification object:self];
 }
 
+- (void)addTraceFromObject:(NCObject*) obj index: (int) index
+{
+    
+}
+
+- (IBAction)addSignal:(id)sender
+{
+    connectStimulusNum = (int)[sender tag];
+}
+
 - (IBAction)selectRunSimulationButton: (id) pId
 {
     if ([canvas simulationIsRunning])
@@ -87,8 +97,9 @@ NSString *NCSelectedAddStimulusToolNotification = @"NCSelectedAddStimulusTool";
         [canvas stopSimulation];
     } else {
         [runSimulationButton setLabel:@"Stop Simulation"];
-        [canvas runSimulationWithTimestep:[simTimestep doubleValue] Length:[simLength doubleValue]];
+        [canvas runSimulationWithTimestep:0.05 Length:0.0];
     }
 }
+
 
 @end

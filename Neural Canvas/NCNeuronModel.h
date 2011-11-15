@@ -19,6 +19,11 @@ public:
     virtual int getNumParams() = 0;
     virtual const char* getParamName(int index) = 0;
     virtual double getParamValue(int index) = 0;
+    
+    virtual int getNumTraces() = 0;
+    virtual const char* getTraceName(int index) = 0;
+    virtual double getTraceValue(int index) = 0;
+
 };
 
 #endif

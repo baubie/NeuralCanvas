@@ -21,8 +21,8 @@ private:
     double tref;
     double thresh;
     double spike_height;
-    
     double ref;
+    
     
 public:
     void update(double dt);
@@ -33,6 +33,10 @@ public:
     int getNumParams();
     const char* getParamName(int index);
     double getParamValue(int index);    
+    
+    int getNumTraces();
+    const char* getTraceName(int index);    
+    double getTraceValue(int index);
     
 };
 

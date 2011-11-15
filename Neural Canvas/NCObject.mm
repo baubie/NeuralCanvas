@@ -13,6 +13,7 @@
 
 @synthesize location;
 @synthesize selected;
+@synthesize hovered;
 
 - (id)init
 {
@@ -51,6 +52,12 @@
 - (void)initialize
 {
     // To be implemented by objects
+}
+
+- (double)getTraceValueAtIndex:(int) index
+{
+    // To be implemented by objects
+    return 0;
 }
 
 

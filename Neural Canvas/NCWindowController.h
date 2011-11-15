@@ -8,6 +8,8 @@
 
 #import <Cocoa/Cocoa.h>
 #import "NCCanvasView.h"
+#import "NCOpenGLScope.h"
+#import "NCOverlayView.h"
 
 extern NSString *NCSelectedAddNeuronToolNotification;
 extern NSString *NCSelectedSelectToolNotification;
@@ -23,11 +25,12 @@ extern NSString *NCSelectedAddStimulusToolNotification;
     IBOutlet NSToolbarItem *addStimulusButton;
     IBOutlet NSToolbarItem *runSimulationButton;
     IBOutlet NCCanvasView *canvasView;
-    
+    IBOutlet NCOpenGLScope *glView;    
     IBOutlet NSTextField* statusbarLeftLabel;
     
-    IBOutlet NSTextField* simTimestep;
-    IBOutlet NSTextField* simLength;
+    IBOutlet NCOverlayView* overlayView;
+    
+    int connectStimulusNum;
     
 }
 
@@ -37,6 +40,9 @@ extern NSString *NCSelectedAddStimulusToolNotification;
 - (IBAction)selectAddConnectionButton: (id) pId;
 - (IBAction)selectAddStimulusButton: (id) pId;
 - (IBAction)selectRunSimulationButton: (id) pId;
+
+- (void)addTraceFromObject:(NCObject*) obj index: (int) index;
+- (IBAction)addSignal:(id)sender;
 
 - (void) resetToolbar;
 - (void) redrawCanvas;

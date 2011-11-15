@@ -13,17 +13,21 @@ extern NSString *NCSelectedAddNeuronToolNotification;
 extern NSString *NCSelectedSelectToolNotification;
 extern NSString *NCSelectedAddConnectionToolNotification;
 extern NSString *NCSelectedAddStimulusToolNotification;
+extern NSString *NCSelectObjectForTrace;
 
 @interface NCCanvasView : NSView {
     
     NSPoint canvasOffset;
     float canvasScale;
     NSPoint lastDragLocation;
-    
     NCObject* draggingObject;
+    
+    BOOL selectObjectForSignalMode;
 }
 
 - (void)selectedToolChanged:(NSNotification *)notification;
+- (void)selectObjectForSignal:(NSNotification *)notification;
+
 - (void)setCursor;
 
 - (NSPoint)screenPointFromDocPoint:(NSPoint)point;

@@ -57,3 +57,23 @@ double NCLIF::getParamValue(int index) {
     
     return 0;
 }
+
+int NCLIF::getNumTraces() {
+    return 1;
+}
+
+const char* NCLIF::getTraceName(int index) {
+    return "Voltage";
+}
+
+double NCLIF::getTraceValue(int index) {
+    
+    switch (index) {
+        case 0:
+            return this->V;
+        default: 
+            return 0;
+    }
+}
+
+

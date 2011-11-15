@@ -32,6 +32,9 @@
     [shadow setShadowOffset: NSMakeSize(1, -1)];
     [shadow setShadowBlurRadius: 4];
     [shadow setShadowColor: [NSColor blackColor]];
+
+    NSColor* fillColor;
+    fillColor = [NSColor blueColor];
     
     if ([self selected])
     {
@@ -39,6 +42,12 @@
         [shadow setShadowBlurRadius: 10]; 
         scale *= 1.1;
     }
+    
+    if ([self hovered])
+    {
+        fillColor = [fillColor highlightWithLevel:0.2]; 
+    }
+    [fillColor set];
     
     
     NSRect neuronRect;
@@ -48,18 +57,13 @@
     neuronRect.size.height *= scale;
     neuronRect.origin.x -= 15*scale;
     neuronRect.origin.y -= 15*scale;
-    NSColor* fillColor;
-    fillColor = [NSColor blueColor];
-    [fillColor set];
     
     [shadow set];
 
     NSBezierPath *path = [NSBezierPath bezierPathWithOvalInRect:neuronRect];
 
     [path setLineWidth:0];
-
     [path stroke];
-    
     [path fill];
     
 }
@@ -97,5 +101,11 @@
 {
     model->initialize();
 }
+
+- (double)getTraceValueAtIndex:(int) index
+{
+    return model->getTraceValue(index);
+}
+
 
 @end

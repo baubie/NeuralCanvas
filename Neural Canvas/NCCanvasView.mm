@@ -250,9 +250,21 @@ enum {
         NCObject* obj = [[[self canvas] objects] objectAtIndex:i];
         if ([obj containsDocumentPoint:[self docPointFromScreenPoint:[self convertPoint:[theEvent locationInWindow] fromView:nil]]]) 
         {
-            draggingObject = obj;
-            [draggingObject setSelected:YES];
-            return;
+            if (selectObjectForSignalMode) {
+                
+                // We are trying to select an object for a signal
+                // Therefore, post the notification that we found a signal
+                [[[self window] windowController] addTraceFromObject:obj index:0];
+                
+                // Get out of this mode.
+                selectObjectForSignalMode = NO;
+                return;
+                
+            } else {
+                draggingObject = obj;
+                [draggingObject setSelected:YES];
+                return;
+            }
         }
     }     
     
@@ -313,13 +325,28 @@ enum {
 
 - (void)mouseMoved:(NSEvent *)theEvent
 {
-    /*
-    NSPoint p = [self convertPoint:[theEvent locationInWindow] fromView:nil];
-    NSPoint dp = [self docPointFromScreenPoint:p];
-    NSPoint sp = [self screenPointFromDocPoint:dp];
-    NSString *s = [NSString stringWithFormat:@"View: (%f,%f)  Document: (%f,%f)  ViewFD: (%f,%f)", p.x, p.y, dp.x, dp.y,sp.x,sp.y];
-    [[[self window] windowController] updateStatusBarText:s];
-    */
+    bool needRedraw = NO;
+    for(int i = (int)[[[self canvas] objects] count]-1; i >= 0 ; i--) {
+        NCObject* obj = [[[self canvas] objects] objectAtIndex:i];
+        if ([obj containsDocumentPoint:[self docPointFromScreenPoint:[self convertPoint:[theEvent locationInWindow] fromView:nil]]]) 
+        {
+            if ([obj hovered] == NO)
+            {
+                [obj setHovered:YES];
+                needRedraw = YES;
+            }
+        } else {
+            if ([obj hovered] == YES)
+            {
+                [obj setHovered:NO];
+                needRedraw = YES;
+            }
+        }
+    }
+    if (needRedraw)
+    {
+        [self setNeedsDisplay:YES];
+    }
 }
 
 
@@ -367,6 +394,11 @@ enum {
         [self setCurrentTool:toolAddStimulus];
     }
     [self setCursor];
+}
+
+- (void)selectObjectForSignal:(NSNotification *)notification
+{
+    selectObjectForSignalMode = YES;
 }
 
 
